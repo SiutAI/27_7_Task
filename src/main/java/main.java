@@ -6,11 +6,11 @@ public class main {
     static University university2 = new University("МУ", "Местный Университет", "Муга", 1923, StudyProfile.MEDICINE);
 
     public static void main(String[] args) {
-        System.out.println(student1.toString());
-        System.out.println(student2.toString());
-        System.out.println(student3.toString());
-        System.out.println(university1.toString());
-        System.out.println(university2.toString());
+        System.out.println(student1);
+        System.out.println(student2);
+        System.out.println(student3);
+        System.out.println(university1);
+        System.out.println(university2);
     }
 
 
