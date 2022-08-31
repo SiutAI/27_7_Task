@@ -4,7 +4,9 @@ public enum StudyProfile {
     MEDICINE ("Медицина"),
     BIOLOGY ("Биология"),
     PHILOSOPHY ("Философия"),
-    MATH ("Математика");
+    MATHEMATICS ("Математика"),
+    PHYSICS ("Физика"),
+    LINGUISTICS("Лингвистика");
 
     private String profileName;
 

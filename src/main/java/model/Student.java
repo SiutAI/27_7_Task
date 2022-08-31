@@ -13,6 +13,9 @@ public class Student {
         this.avgExamScore = avgExamScore;
     }
 
+    public Student() {
+    }
+
     @Override
     public String toString() {
         return (fullName + ' ' + universityId + ' ' + currentCourseNumber + ' ' + avgExamScore);
