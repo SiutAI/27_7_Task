@@ -8,10 +8,13 @@ public enum StudyProfile {
     PHYSICS ("Физика"),
     LINGUISTICS("Лингвистика");
 
-    private String profileName;
+    private final String profileName;
 
     StudyProfile(String profileName) {
         this.profileName = profileName;
     }
 
+    public String getProfileName() {
+        return this.profileName;
+    }
 }
