@@ -12,13 +12,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class XlsReader {
 
     private XlsReader() {
     }
 
+    public static final Logger logger = Logger.getLogger(XlsReader.class.getName());
+
     public static List<University> readXlsUniversities(String filePath) throws IOException {
+
+        //добавить логер сюда
 
         List<University> universities = new ArrayList<>();
 
@@ -45,6 +50,8 @@ public class XlsReader {
     }
 
     public static List<Student> readXlsStudents(String filePath) throws IOException {
+
+        //добавить логер сюда
 
         List<Student> students = new ArrayList<>();
 

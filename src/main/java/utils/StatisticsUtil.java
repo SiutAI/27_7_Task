@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.OptionalDouble;
 import java.util.Set;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class StatisticsUtil {
@@ -19,8 +20,12 @@ public class StatisticsUtil {
     private StatisticsUtil() {
     }
 
+    public static final Logger logger = Logger.getLogger(StatisticsUtil.class.getName());
+
     public static List<Statistics> createStatistics(List<Student> students,
                                                     List<University> universities) {
+
+        //добавить логер сюда
 
         List<Statistics> statisticsList = new ArrayList<>();
 
