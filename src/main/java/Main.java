@@ -1,5 +1,8 @@
 import io.XlsReader;
 import io.XlsWriter;
+import io.XmlWriter;
+import io.JsonWriter;
+import model.FullInfo;
 import model.Statistics;
 import model.Student;
 import model.University;
@@ -8,10 +11,10 @@ import comparator.UniversityComparator;
 import enums.StudentComparatorType;
 import enums.UniversityComparatorType;
 import utils.ComparatorUtil;
-import utils.JsonUtil;
 import utils.StatisticsUtil;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -24,7 +27,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        //добавить логер сюда
         try {
             LogManager.getLogManager().readConfiguration(
                     Main.class.getResourceAsStream("/logging.properties"));
@@ -48,5 +50,16 @@ public class Main {
 
         List<Statistics> statisticsList = StatisticsUtil.createStatistics(students, universities);
         XlsWriter.writeXlsStatistics(statisticsList, "statistics.xlsx");
+
+        FullInfo fullInfo = new FullInfo()
+                .setStudentList(students)
+                .setUniversityList(universities)
+                .setStatisticsList(statisticsList)
+                .setProcessDate(new Date());
+
+        XmlWriter.generateXmlReq(fullInfo);
+        JsonWriter.writeJsonReq(fullInfo);
+
+        logger.log(INFO, "Application finished");
     }
 }

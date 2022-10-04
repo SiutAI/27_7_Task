@@ -1,0 +1,48 @@
+окт. 04, 2022 10:57:28 PM Main main
+INFO: Application started, Logger configured
+окт. 04, 2022 10:57:28 PM io.XlsReader readXlsUniversities
+INFO: Excel reading started
+окт. 04, 2022 10:57:29 PM io.XlsReader readXlsUniversities
+INFO: Excel reading finished successfully
+окт. 04, 2022 10:57:29 PM io.XlsReader readXlsStudents
+INFO: Excel reading started
+окт. 04, 2022 10:57:29 PM io.XlsReader readXlsStudents
+INFO: Excel reading finished successfully
+окт. 04, 2022 10:57:29 PM utils.StatisticsUtil createStatistics
+INFO: Statistics module started
+окт. 04, 2022 10:57:29 PM utils.StatisticsUtil createStatistics
+INFO: Statistics module finished with 4 statistical objects
+окт. 04, 2022 10:57:29 PM io.XlsWriter writeXlsStatistics
+INFO: Excel writing started
+окт. 04, 2022 10:57:29 PM io.XlsWriter writeXlsStatistics
+INFO: Excel writing finished successfully
+окт. 04, 2022 10:57:29 PM io.XmlWriter generateXmlReq
+INFO: XML marshalling started
+окт. 04, 2022 10:57:29 PM io.XmlWriter generateXmlReq
+SEVERE: XML marshalling failed
+javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.bind.v2.ContextFactory]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:269)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:412)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at io.XmlWriter.generateXmlReq(XmlWriter.java:28)
+	at Main.main(Main.java:60)
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:267)
+	... 5 more
+
+окт. 04, 2022 10:57:29 PM io.JsonWriter writeJsonReq
+INFO: JSON writing started
+окт. 04, 2022 10:57:29 PM io.JsonWriter writeJsonReq
+INFO: Directory created successfully
+окт. 04, 2022 10:57:29 PM io.JsonWriter writeJsonReq
+INFO: JSON writing finished successfully
+окт. 04, 2022 10:57:29 PM Main main
+INFO: Application finished

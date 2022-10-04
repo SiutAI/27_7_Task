@@ -1,9 +1,31 @@
 package model;
 
+import com.google.gson.annotations.SerializedName;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+
 public class Student {
+
+    @SerializedName("studentName")
+    @XmlElement(name = "studentName")
     private String fullName;
+
+    @SerializedName("universityId")
+    @XmlElement(name = "universityId")
     private String universityId;
+
+    @SerializedName("course")
+    @XmlTransient
     private int currentCourseNumber;
+
+
+    @SerializedName("avgScore")
+    @XmlElement(name = "avgScore")
     private float avgExamScore;
 
     public Student(String fullName, String universityId, int currentCourseNumber, float avgExamScore) {
@@ -52,6 +74,5 @@ public class Student {
     public void setAvgExamScore(float avgExamScore) {
         this.avgExamScore = avgExamScore;
     }
-
 
 }
